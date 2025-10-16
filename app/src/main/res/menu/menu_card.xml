@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/renombrar"
+        android:title="Renombrar" />
+    <item
+        android:id="@+id/copiar"
+        android:title="Copiar" />
+    <item
+        android:id="@+id/Cortar"
+        android:title="Cortara" />
+    <item
+        android:id="@+id/eliminar"
+        android:title="Eliminar" />
+    <item
+        android:id="@+id/mover"
+        android:title="Mover" />
+</menu>
