@@ -1,6 +1,7 @@
 package com.example.elsol
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.media.Image
 import android.os.Bundle
 import android.view.MenuInflater
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        val tresPuntosMain = findViewById<ImageView>(R.id.tresPuntosMain)
 
         val datos = mutableListOf(
             CardItem(R.drawable.corona_solar, "Corona Solar"),
@@ -35,6 +37,11 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = GridLayoutManager(this,2)
         recyclerView.adapter = CardAdapter(datos)
+
+        tresPuntosMain.setOnClickListener {
+            val ventanaComparador: Intent = Intent(this, CompararPlanetas::class.java)
+            startActivity(ventanaComparador)
+        }
 
     }
 

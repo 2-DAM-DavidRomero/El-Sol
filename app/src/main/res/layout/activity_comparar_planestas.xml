@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CompararPlanetas"
+    android:id="@+id/main">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/toolBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="El Sol"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparar planetas"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp" />
+
+    <AutoCompleteTextView
+        android:id="@+id/SelectPlaneta1"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/purpleHard"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/SelectPlaneta2"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <AutoCompleteTextView
+        android:id="@+id/SelectPlaneta2"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:background="@color/purpleHard"
+        app:layout_constraintTop_toBottomOf="@id/textView"
+        app:layout_constraintStart_toEndOf="@id/SelectPlaneta1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"/>
+
+    <TextView
+        android:id="@+id/diametro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diámetro"
+        android:textColor="@color/purpleHard"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/SelectPlaneta1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/diaValPlan1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleSoftCC"
+        app:layout_constraintTop_toBottomOf="@id/diametro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/diaValPlan2"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginStart="5dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/diaValPlan2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleSoftCC"
+        app:layout_constraintTop_toBottomOf="@id/diametro"
+        app:layout_constraintStart_toEndOf="@id/diaValPlan1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginEnd="5dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/distanciaSol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Distancia al Sol"
+        android:textColor="@color/purpleHard"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/diaValPlan1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/disValPlan1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleSoftCC"
+        app:layout_constraintTop_toBottomOf="@id/distanciaSol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/disValPlan2"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginStart="5dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/disValPlan2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleSoftCC"
+        app:layout_constraintTop_toBottomOf="@id/distanciaSol"
+        app:layout_constraintStart_toEndOf="@id/disValPlan1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginEnd="5dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/densidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Densidad"
+        android:textColor="@color/purpleHard"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/disValPlan1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/denValPlan1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleSoftCC"
+        app:layout_constraintTop_toBottomOf="@id/densidad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/denValPlan2"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginStart="5dp"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/denValPlan2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/purpleSoftCC"
+        app:layout_constraintTop_toBottomOf="@id/densidad"
+        app:layout_constraintStart_toEndOf="@id/denValPlan1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginEnd="5dp"
+        android:textAlignment="center"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
